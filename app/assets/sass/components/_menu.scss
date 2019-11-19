@@ -1,0 +1,118 @@
+// ==========================================================================
+// COMPONENTS /
+// ==========================================================================
+
+.nhsuk-action-bar{
+  a:first-child{
+    margin-right: 32px;
+  }
+}
+
+nav.patient-info{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+ul{
+
+  display:flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-between;
+
+}
+li{
+  padding: 8px 16px;
+  margin-bottom: 0;
+  margin-right: 32px;
+  font-size: 16px;
+
+}
+ul li:first-child{
+  background-color:#425563;
+  color:#f0f4f5;
+
+}
+a{
+
+}
+}
+// ==========================================================================
+// TABS /
+// ==========================================================================
+
+
+nav.nhsuk-tabs{
+  font-size: 17px;
+  display: flex;
+  flex-wrap: nowrap;
+  background: $color_nhsuk-grey-4;
+  border-bottom: 1px solid $color_nhsuk-grey-2;
+
+ul{
+  max-width: 75%;
+  display:flex;
+  flex-wrap: nowrap;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+
+}
+li{
+  margin-bottom: 0;
+  border-right:1px solid $color_nhsuk-grey-2;
+
+  a:link, a:visited{
+    margin-bottom: 0;
+    color:$color_nhsuk-blue;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1.5em;
+    padding: 12px 16px;
+    text-decoration: none;
+    a:hover{
+      background-color: $color_nhsuk-grey-2;
+    }
+
+    a:active{
+      background: $color_nhsuk-white;
+    }
+
+  }
+}
+
+a.nhsuk-focus{
+  background-color: $color_nhsuk-white;
+
+}
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+
+
+}
+
+.flex-container  div {
+
+  margin-right: 10px;
+ul {
+  display: inline;
+  margin-left: 32px;
+  justify-content: space-between;
+
+  li{
+    display: inline;
+    text-align:center;
+    margin-right:32px;
+    padding: 8px;
+  }
+}
+
+}

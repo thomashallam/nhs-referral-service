@@ -1,0 +1,51 @@
+
+nav.sub-nav
+{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+ ul
+{
+  display: inline-flex;
+  margin: auto 32px;
+}
+}
+
+nav.sub-nav ul li
+{
+  margin: 0 32px;
+}
+
+nav.sub-nav > ul > li > a
+{
+  text-decoration: underline;
+  color: #005eb8;
+  padding: 20px;
+  border-bottom: 5px solid #d8dde0;
+}
+
+nav.sub-nav > ul > li > a:hover
+{
+  background-color:#ccc;
+  border-bottom: 5px solid #d8dde0;
+}
+
+nav.sub-nav > ul > li > a.selected
+{
+  border-bottom: 5px solid #005eb8;
+}
+
+.tab
+{
+  display: none;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.tab.active
+{
+  display: block;
+}

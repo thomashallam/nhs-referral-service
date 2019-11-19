@@ -1,0 +1,86 @@
+{% from 'header/macro.njk' import header %}
+{% from 'footer/macro.njk' import footer %}
+{% from 'skip-link/macro.njk' import skipLink %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>{% block pageTitle %}{{ serviceName }}{% endblock %}</title>
+
+    <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-55Roman.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://assets.nhs.uk/fonts/FrutigerLTW01-65Bold.woff2" type="font/woff2" crossorigin>
+    <link rel="preconnect  dns-prefetch" href="https://www.nhs.uk/">
+    <link rel="preconnect  dns-prefetch" href="https://assets.nhs.uk/" crossorigin>
+
+    <link rel="stylesheet" href="/css/main.css">
+<link href="/css/icons.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Anti-flicker snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<!-- Anti-flicker snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',1000,
+{'GTM-N4H6NSC':true});</script>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4H6NSC');</script>
+<!-- End Google Tag Manager -->
+
+
+    {% block headIcons %}
+      <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
+      <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
+      <link rel="icon" href="/nhsuk-frontend/assets/favicons/favicon.png">
+    {% endblock %}
+  </head>
+
+  <body class="{{ bodyClasses }}">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4H6NSC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% block bodyStart %}{% endblock %}
+
+      {% block skipLink %}
+        {{ skipLink({
+          href: '#main-content',
+          text: 'Skip to main content'
+        }) }}
+      {% endblock %}
+
+      {% block header %}
+        {{ header({}) }}
+      {% endblock %}
+
+      {% block beforeContent %}{% endblock %}
+
+      {% block main %}
+        <div class="nhsuk-width-container {{ containerClasses }}"">
+          <main class=" {{ mainClasses }}" id="main-content" role="main">
+            {% block content %}{% endblock %}
+          </main>
+        </div>
+      {% endblock %}
+
+      {% block footer %}
+        {{ footer({
+          "showLogo": "false"
+        })}}
+      {% endblock %}
+
+    {% block bodyEnd %}{% endblock %}
+</html>

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": "Emily learns how to code",
+    "text": "HTML basics and first NHS page"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
+       
+<h2><a href="emily-code/basics">Basic HTML with no styles</a></h2>
+<p>Basic html tags</p>
+
+<h2><a href="emily-code/nhs-page">NHS Page</a></h2>
+<p>Page with NHS styles</p>
+
+
+
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+{{ hero({
+"heading": "e Referral service",
+"text": "Style, patterns and components"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-5">
+
+    <p class="nhsuk-body-l">
+      The purpose of this design system is to document patterns and components specific to the
+      e-Referral service.
+    </p>
+
+    <h2>Components</h2>
+    <nav class=“nhsuk-sub-navigation” aria-label=“Sub navigation”>
+        <ul class=“nhsuk-sub-navigation__list”>
+            <li class=“nhsuk-sub-navigation__item”>
+              <a class=“nhsuk-sub-navigation__link” aria-current=“page” href=“#1”>
+                Nav item 1
+              </a>
+            </li>
+            <li class=“nhsuk-sub-navigation__item”>
+              <a class=“nhsuk-sub-navigation__link” href="#">
+                Nav item 2
+              </a>
+            </li>
+        </ul>
+       </nav>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}

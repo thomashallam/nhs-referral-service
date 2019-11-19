@@ -1,0 +1,454 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = '' %}
+{% set containerClasses = 'nhsuk-width-container-fluid' %}
+{% set bodyClasses = 'nhsuk-white-background' %}
+{% block pageScripts %}
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/reveal.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
+<script type="text/javascript" src="/js/sidebar.js"></script>
+<script type="text/javascript" src="/js/reveal-test.js"></script>
+{% endblock %}
+{% block pageTitle %}
+NHS e-referral Service
+{% endblock %}
+
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container-fluid nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <a class="nhsuk-header__link" href="/appointments" aria-label="NHS homepage">
+        <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false"
+          viewBox="0 0 40 16">
+          <path fill="#fff" d="M0 0h40v16H0z"></path>
+          <path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6">
+          </path>
+          <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+        </svg>
+      </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- SERVICE NAME -->
+    <div class="nhsuk-header__transactional-service-name">
+      <a class="nhsuk-header__transactional-service-name--link" href="/">e-Referral Service</a>
+    </div>
+
+    <div class="nhsuk-header__content" id="content-header">
+      <div class="nhsuk-header__menu">
+        <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation">
+          <ul class="nhsuk-header__navigation-list" style="border:0">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+                Help
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+                Alerts
+
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+                Dave Evans
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- SUB MENU PATIENT INFO -->
+<nav class="nhsuk-grey-background patient-info">
+  <ul role="navigation">
+    <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
+    <li><strong>Patient: </strong><a href="">EVANS, David (Mr)</a></li>
+    <li><strong>Gender: </strong> Male</li>
+    <li>30 years (4 June 1988)</li>
+  </ul>
+  <a class="" href="/summary/referral-summary">Close
+    <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+</svg></a>
+
+</div>
+</nav>
+{% endblock %}
+{% block content %}
+
+
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="/summary/referral-summary">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+        </svg>
+        Go back to referral summary</a>
+    </div>
+  </div>
+</div>
+
+<div class="nhsuk-inset-text--appointment">
+<p><strong>Current appointment:</strong></p>
+<div class="nhsuk-list">
+    <p>Thursday 4th November at 9:00am</p>
+    <p>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</p>
+   
+      </div>
+</div>
+
+<div class="nhsuk-grid-row nhsuk-u-margin-top-2 nhsuk-u-margin-bottom-6">
+  <div class="nhsuk-grid-column-full"></div>
+    <h2 class="nhsuk-heading-l">Choose an appointment</h2>
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 class="service-details-link" data-target="service-details-1">The Yorkshire Clinic </h2>
+      <p class="nhsuk-hint">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</p>
+      <div class="service-details-content" id="service-details-1">
+          <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+            BRADFORD ROAD, BINGLEY, WEST YORKSHIRE, BD16 1TW <br>
+              Professional Phone: 01274 550621 Patient Phone: 01274 550621 <br>
+              Email: RHC.York-Referral-Team@nhs.net   </p>
+  
+              <dl class="nhsuk-body-s">
+                <dt>Indicative treatment wait</dt>
+                <dd>14 weeks</dd>
+              </dl>
+  
+            <dl class="nhsuk-body-s">
+              <dt>Conditions</dt>
+  
+              <dd>Inguinal Hernia
+                  Umbilical Hernia
+                  Femoral Hernia
+                  Abdominal Hernia
+                  Recurrent Hernia
+                  Epigastric hernia
+                  Primary and Single
+                  
+                  For further information about our Hospital, Services & Treatments, <a href="">click here</a></dd>
+                  <dt>Procedures performed</dt>
+                  <dd>Removal prosthetic material from previous repair incision hernia 
+                      Repair of ventral hernia 
+                      Removal prosthetic material from previous repair ventral hernia 
+                      Repair of other hernia of abdominal wall 
+                      Primary repair of inguinal hernia 
+                      Repair of recurrent inguinal hernia 
+                      Primary repair of femoral hernia 
+                      Removal prosthetic material from previous repair femoral hernia 
+                      Repair of recurrent femoral hernia 
+                      Removal prosthetic material from previous repair umbilical hernia 
+                      Repair of umbilical hernia 
+                      Bilateral herniotomy 
+                      Unilateral herniotomy 
+                      Ligation of patent processus vaginalis 
+                      Simple excision of inguinal hernial sac 
+                      Plastic operations on umbilicus 
+                      Lapraposcopic hernia</dd>
+              <dt>Exclusions</dt>
+              <dd>A patient who has an unstable mental condition and is receiving psychiatric treatment.
+                  Surgery for patients under 18 years of age
+              </dd>
+              <dt>Suggested investigations</dt>
+              <dd>None</dd>
+            </dl>
+
+
+
+
+
+      </div>
+
+
+
+      <table class="nhsuk-table nhsuk-u-margin-top-0">
+
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col">Date</th>
+            <th class="nhsuk-table__header" scope="col">Time</th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Thursday 4th November <span class="nhsuk-tag__success">First available</span></td>
+            <td class="nhsuk-table__cell ">10:00am</td>
+            <td class="nhsuk-table__cell "><a href="rebook-review">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Thursday 4th November</td>
+            <td class="nhsuk-table__cell ">15:00pm</td>
+            <td class="nhsuk-table__cell "><a href="/errors/errors-no-appointments">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 5th November</td>
+            <td class="nhsuk-table__cell ">9:00am</td>
+            <td class="nhsuk-table__cell "><a href="/errors/errors-no-response">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 5th November</td>
+            <td class="nhsuk-table__cell ">10:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 5th November</td>
+            <td class="nhsuk-table__cell ">11:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Saturday 6th November</td>
+            <td class="nhsuk-table__cell ">9:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Saturday 6th November</td>
+            <td class="nhsuk-table__cell ">10:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+
+            <td colspan="3" class="nhsuk-table__cell"><a href="referral-appointments-more">Load more</a></td>
+
+
+
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 class="service-details-link" data-target="service-details-2">Calderdale Royal Hospital <span class="nhsuk-tag__default">Telephone Appointments</span></h2> 
+      <p class="nhsuk-hint">CHFT - MSK Hernia - Calderdale Royal Hospital - RWY </p>
+      <div class="service-details-content" id="service-details-2">
+          <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+            SALTERHEBBLE, HALIFAX, WEST YORKSHIRE, HX3 0PW <br>
+              Professional Phone: 01422 222677 Patient Phone: 01484 355370 
+                </p>
+  
+              <dl class="nhsuk-body-s">
+                <dt>Indicative treatment wait</dt>
+                <dd>17 weeks</dd>
+              </dl>
+  
+            <dl class="nhsuk-body-s">
+              <dt>Referrer alert</dt>
+              <dd>Advise the patient these are virtual appointments. Do not attend the appointment.</dd>
+              <dt>Conditions</dt>
+  
+              <dd>Hernia 
+                  All general surgical conditions 
+                  Skin and subcutaneous lumps 
+                  Swelling 
+                  All skin lesions that are not appropriate for dermatology</dd>
+                  <dt>Procedures performed</dt>
+                  <dd>Trigger point injection</dd>
+              <dt>Exclusions</dt>
+              <dd>Endocrine Patients, Parastomal hernias and incisional hernias Patients under the age of 16, should be referred to the relevant Paediatric sub specialty. Suspected Cancer Referrals should be referred to the Trust via the LTHT Fast Track Office
+              </dd>
+              <dt>Suggested investigations</dt>
+              <dd>None</dd>
+            </dl>
+
+
+
+      </div>
+
+
+
+      <table class="nhsuk-table nhsuk-u-margin-top-0">
+
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col">Date</th>
+            <th class="nhsuk-table__header" scope="col">Time</th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Thursday 14th November </td>
+            <td class="nhsuk-table__cell ">9:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Thursday 14th November</td>
+            <td class="nhsuk-table__cell ">15:00pm</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 15th November</td>
+            <td class="nhsuk-table__cell ">9:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 15th November</td>
+            <td class="nhsuk-table__cell ">10:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Friday 15th November</td>
+            <td class="nhsuk-table__cell ">11:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Saturday 16th November</td>
+            <td class="nhsuk-table__cell ">9:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Saturday 16th November</td>
+            <td class="nhsuk-table__cell ">10:00am</td>
+            <td class="nhsuk-table__cell "><a href="">Book appointment</a></td>
+          </tr>
+          <tr class="nhsuk-table__row">
+
+            <td colspan="3" class="nhsuk-table__cell"><a href="">Load more</a></td>
+
+
+
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div class="nhsuk-grid-column-two-thirds">
+        <h2 class="service-details-link" data-target="service-details-3">St. James University Hospital</h2>
+      <p class="nhsuk-hint">Hernia - Not Otherwise Specified - Leeds TH (St James’s Hosp)- RR8</p>
+      <div class="service-details-content" id="service-details-3">
+          <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+            BECKETT STREET, LEEDS, WEST YORKSHIRE, LS9 7TF <br>
+              Professional Phone: 0113 20 64933 Patient Phone: 0113 20 64433 <br>
+              Email: Choose-And.Book@leedsth.nhs.uk  </p>
+  
+              <dl class="nhsuk-body-s">
+                <dt>Indicative treatment wait</dt>
+                <dd>30 weeks</dd>
+              </dl>
+  
+            <dl class="nhsuk-body-s">
+              <dt>Conditions</dt>
+  
+              <dd>open hernia, laparoscopic inguinal hernia</dd>
+              <dt>Exclusions</dt>
+              <dd>Endocrine Patients, Parastomal hernias and incisional hernias Patients under the age of 16, should be referred to the relevant Paediatric sub specialty. Suspected Cancer Referrals should be referred to the Trust via the LTHT Fast Track Office
+              </dd>
+              <dt>Suggested investigations</dt>
+              <dd>Referral Protocols are available on Leeds Health Pathways website. nww.lhp.leedsth.nhs.uk </dd>
+            </dl>
+
+
+      </div>
+
+      <table class="nhsuk-table nhsuk-u-margin-top-0">
+
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"></th>
+            <th class="nhsuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell "><strong>There are no slots available for this service</strong></td>
+            <td class="nhsuk-table__cell "><a href="rebook-defer-reasons">Defer booking to provider</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    
+        <h2 class="service-details-link" data-target="service-details-4">Spire Leeds Hospital</h2>
+        <p class="nhsuk-hint">Hernias - Surgery (Not Otherwise Specified) - Spire Leeds Hospital - NT332</p>
+        <div class="service-details-content" id="service-details-4">
+            <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+            METHLEY LANE, LEEDS, WEST YORKSHIRE, LS26 9HG <br>
+              Phone: 0113 242 5544 Email: enquiries@spire.nhs.net</p>
+  
+              <dl class="nhsuk-body-s">
+                <dt>Indicative treatment wait</dt>
+                <dd>9 out of 10 patients start treatment in approximately 17 weeks in this specialty</dd>
+                <dt>Referrer alerts</dt>
+                <dd>Please read 'exclusions' section prior to referral</dd>
+              </dl>
+  
+            <dl class="nhsuk-body-s">
+              <dt>Conditions</dt>
+  
+              <dd>Diagnosis & treatment of abdominal wall lesions</dd>
+              <dt>Exclusions</dt>
+              <dd>Service Users under the age of 18.
+                Any Service User with an ASA (American Society of Anaesthesiologists) score of 3 (who is unstable), unless the appropriate Critical Care facilities that meet the levels of Critical Care for Adult Patients Standards and Guidelines
+                (Intensive Care Society 2002) are available.
+              </dd>
+              <dd>
+                Where the Service Users will require general anaesthetic and the patient has a Body Mass Index greater than 35.
+                Service Users with suspected cancer, who should be referred directly on to the appropriate cancer pathway.
+                Service Users who have a current and significantly unstable psychiatric disorder where the Hospital cannot reasonably be expected to accommodate the patient’s needs.
+              </dd>
+            </dl>
+  
+    </div>
+
+        <table class="nhsuk-table nhsuk-u-margin-top-0">
+
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col"></th>
+              <th class="nhsuk-table__header" scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell "><strong>This service manages it's own apppointments. <br>Patients must book with this service directly. </br> </strong></td>
+              <td class="nhsuk-table__cell "><a href="rebook-patient-reasons">Patient to book</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+
+
+
+      <div class="nhsuk-grid-column-one-half">
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- FINAL GRID ROW AND COLUMN -->
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}

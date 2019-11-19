@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+{{ hero({
+"heading": "e-Referral service",
+"text": "Style guide"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-5">
+
+    <h2>
+    List of all styles, patterns and components</span></h2>
+    <p>Tested design styles, components and patterns used in e-Referral service.</p>
+
+    <h3>
+        Components
+        <span class="nhsuk-caption-m nhsuk-caption--bottom ">
+          Save time and help users with these UI parts.
+        </span>
+      </h3>
+
+      {{ contentsList({
+        items: [
+          
+          {
+            href: "/styleguide/alerts",
+            text: "Alerts"
+          },
+          {
+            href: "/docs/templates/mini-hub/page-3",
+            text: "Page three"
+          }
+        ]
+      }) }}
+
+      <p>[Page content goes here]</p>
+      
+
+    
+
+
+
+            </div>
+
+            
+
+          </div>
+      </div>
+
+      {% endblock %}
+
+
+      {% block footer %}
+      <footer role="contentinfo">
+        <div class="nhsuk-footer" id="nhsuk-footer">
+          <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+            <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+          </div>
+        </div>
+      </footer>
+      {% endblock %}
+
+      
