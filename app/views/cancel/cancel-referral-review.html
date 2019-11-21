@@ -15,7 +15,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="/appointments" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -64,17 +64,10 @@ NHS e-referral Service
 <nav class="nhsuk-grey-background patient-info">
   <ul role="navigation">
     <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="">EVANS, David (Mr)</a></li>
+    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
   </ul>
-  <div class="nhsuk-close">
-    <a class="" href="/summary/referral-summary">Close
-      <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
-</svg></a>
-
-  </div>
 </nav>
 {% endblock %}
 {% block content %}
@@ -82,79 +75,52 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
     <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="rebook-appointments">
+      <a class="nhsuk-back-link__link" href="search-results">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to choose an appointment</a>
+        Go back to search results</a>
     </div>
 
 </div>
+<div class="nhsuk-grid-column-one-half nhsuk-u-margin-top-4">
+  <div class="panel panel-border-wide alert-default">
+    <h1 class="nhsuk-heading-s">
+
+      Check these details before you continue
+  </h1>
 
 
+  </div>
+  </div>
 
-<div class="nhsuk-grid-column-one-third">
-<h2>Enter more information about cancelling</h2>
 
-<h4>Reason for cancelling referral</h4>
-      </div>
-      </div>
-      <div class="nhsuk-grid-row">
-<form name="radio-buttons">
-    <div class="multiple-choice--hod nhsuk-radios">
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="patient-private" name="cancel-reason" type="radio">
-          <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="patient-private">
-            Patient intends to go private
-          </label>
-        </div>
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="referral-error" name="cancel-reason" type="radio">
-          <label class="nhsuk-label nhsuk-radios__label" for="referral-error">
-            Referral raised in error
-          </label>
-        </div>
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="referral-notrequired" name="cancel-reason" type="radio">
-          <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="referral-notrequired">
-            Referral no longer required
-          </label>
-        </div>
-        <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="other-reason" name="cancel-reason" type="radio">
-            <label class="nhsuk-label nhsuk-radios__label" for="patient-other">
-              Other reason
-            </label>
-          </div>
-      
-      </div>
-        
-        <!-- TEXT BOX AREA -->
-        <p>Please provide any comments about the reason for cancelling</p>
+    </div>
 
-                
-        <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-        <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
+
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+  <div class="nhsuk-grid-column-one-half">
+  <h2 class="nhsuk-heading-m">Reason for cancelling the referral</h2>
+  <h4 class="nhsuk-heading-s">Referral no longer required</h4>
+  <p><em>After consulting the patient, we have agreed to cancel the referral as the patient is no longer experiencing any symptoms.</em></p>
+  </div>
+
 
 </div>
 
 
-   
-
-      </div>
+    <div class="nhsuk-u-margin-top-4">
 
 
 
-
-
-
-<div class="nhsuk-u-margin-top-4">
-      <form class="nhsuk-form" action="rebook-confirm">
+      <form class="nhsuk-form  nhsuk-u-margin-top-4" action="cancel-referral-confirm">
         <button class="nhsuk-button--ers" type="submit">
-          Continue
+        Confirm
         </button>
       </form>
-      </div>
+
+
+
     </div>
   </div>
 </div>
