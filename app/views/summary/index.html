@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": "e Referral service",
+    "text": "Prototypes and confidence levels from usability testing"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
+      <div class="nhsuk-grid-column-two-thirds">
+          <h2>e-Referral service search</h2>
+          <p class="nhsuk-body-l">This is a prototype to test an idea, and is not a real service. No data is used or stored as part of the prototype.</p>
+
+
+          <div class="nhsuk-grid-row nhsuk-panel-group">
+            <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+              <div class="nhsuk-panel">
+                <h3>Unbooked</h3> <p>Summary page following new request</p>
+                <a class="nhsuk-button--ers" href="/summary/referral-summary-unbooked">Start now</a>
+              </div>
+            </div>
+
+          <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+              <div class="nhsuk-panel">
+                <h3>Booked</h3> <p>Summary page after appointment booking</p>
+                <a class="nhsuk-button--ers" href="/summary/referral-summary">Start now</a>
+            </div>
+           </div>
+          </div>
+
+
+          <div class="nhsuk-grid-row nhsuk-panel-group">
+              <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+                <div class="nhsuk-panel">
+                  <h3>Cancelled</h3> <p>Summary page following request cancellation</p>
+                  <a class="nhsuk-button--ers" href="/summary/referral-summary-cancelled-referral">Start now</a>
+                </div>
+              </div>
+  
+            <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+                <div class="nhsuk-panel">
+                  <h3>Triage response</h3> <p>Summary page after appointment booking</p>
+                  <a class="nhsuk-button--ers" href="/summary/referral-summary-triage-response">Start now</a>
+              </div>
+             </div>
+          </div>
+      </div>
+  </div>
+
+  
+
+
+
+
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+<footer role="contentinfo">
+ <div class="nhsuk-footer" id="nhsuk-footer">
+   <div class="nhsuk-width-container nhsuk-width-container-fluid">
+
+     <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+   </div>
+ </div>
+</footer>
+{% endblock %}

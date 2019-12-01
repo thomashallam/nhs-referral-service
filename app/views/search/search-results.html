@@ -92,11 +92,11 @@ NHS e-referral Service
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-one-half">
 
-      <label class="nhsuk-label nhsuk-label__strong nhsuk-u-margin-bottom-2" for="autoselect">
+      <label class="nhsuk-label nhsuk-label__strong nhsuk-u-margin-bottom-2" for="autocomplete">
         Search term(s)
       </label>
-      <select id="autoselect" name="autoselect" class="nhsuk-u-input--width-4">
-        <option value=""></option>
+      <select id="autoselect" name="autocomplete" class="nhsuk-u-input--width-4">
+        <option value="{{ data['searchcriteria'] }}"></option>
         <option id='Surgery - Not Otherwise Specified / Hernias'>Surgery - Not Otherwise Specified / Hernias</option>
         <option id='SNOMED Clinical Term'>SNOMED Clinical Term</option>
         <option id='Abdominal wall hernia procedure'>Abdominal wall <code>hernia</code> procedure</option>
@@ -317,7 +317,7 @@ NHS e-referral Service
   <!-- SEARCH RESULTS -->
   <div class="nhsuk-width-container-fluid nhsuk-u-margin-top-4">
     <div class="nhsuk-grid-column-two-thirds">
-      <h3><strong>All results for "Hernia and Surgery"</strong> (9) <span>
+      <h3><strong>All results for "Inguinal hernia"</strong> (9) <span>
         </span></h3>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-full-width">
