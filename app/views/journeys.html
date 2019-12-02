@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block beforeContent %}
+  {{ hero({
+    "heading": "NHS e-Referral Service",
+    "text": "User journeys in the prototype"
+  }) }}
+{% endblock %}
+
+{% block content %}
+    <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
+        <iframe width="500" height="360" src="https://miro.com/app/embed/o9J_kw8e4_g=/?" frameborder="1" scrolling="no" allowfullscreen></iframe>
+    </div>
+    <p>Click link to view on Miro or click hand then maximise to view in current tab</p>
+    <p>(Zoom in and out using Ctrl+/- or mousewheel)</p>
+  </div>
+{% endblock %}
