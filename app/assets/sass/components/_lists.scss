@@ -61,7 +61,7 @@ a{
 .nhsuk-heading-links-container{
   display: flex;
   font-size: .1px;
-  padding: 8px 0;
+  padding: 0px 0px 8px 0px;
   align-items: baseline;
 }
 
@@ -69,14 +69,14 @@ a{
   vertical-align: middle;
   min-height: 40px;
   line-height: 40px;
-
 }
 
 .nhsuk-heading-links ul{
   display: inline-flex;
-  margin: auto 32px;
+  margin: auto 0px;
   li{
-    margin: 0 32px;
+    margin: 0px 12px 0px 12px;
+    border-bottom-style:ridge ;
   }
 
 }

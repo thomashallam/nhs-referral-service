@@ -1,15 +1,18 @@
 // TAGS / BADGES
+// https://beta.nhs.uk/service-manual/styles-components-patterns/colour
+// https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/
+
 .nhsuk-tag {
 
   background-color: $color_nhsuk-white;
   display: inline-block;
   font-family: Frutiger, sans-serif;
   font-size: 14px;
-  
   padding: 4px;
   font-weight: 400;
   border-width: 1px;
   border-style: solid;
+  margin: 0px 10px;
 
 
 }
@@ -24,6 +27,14 @@
   border-color: $color_nhsuk-red;
   color: $color_nhsuk-red;
 }
+
+.nhsuk-tag__warning_invert{
+  @extend .nhsuk-tag;
+border-color: #ED8B00;
+color: $color_nhsuk-white;
+background-color: #ED8B00;
+}
+
 .nhsuk-tag__default{
   @extend .nhsuk-tag;
   color: $color_nhsuk-grey-1;
@@ -36,6 +47,7 @@ border-color: $color_nhsuk-blue;
 }
 
 .nhsuk-tag-large{
+  margin: 0px 0px 10px 0px;
   padding:16px;
   font-weight: 700;
   border-width: 4px;

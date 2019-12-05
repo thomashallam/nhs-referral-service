@@ -8,3 +8,7 @@
     color: #005eb8; 
     cursor:pointer;
   }
+
+  .service-details-link a:focus{
+    text-decoration: inherit;
+  }
