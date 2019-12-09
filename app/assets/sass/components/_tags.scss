@@ -46,12 +46,21 @@ color: $color_nhsuk-blue;
 border-color: $color_nhsuk-blue;
 }
 
+//smaller info tag to make it work for referral summary and advice summary
+.nhsuk-tag-medium{
+  margin: 0px 0px 10px 0px;
+  padding:12px;
+  font-weight: 700;
+  border-width: 4px;
+  font-size: 18px;
+  background-color: rgba(0,0,0,0);
+}
+
 .nhsuk-tag-large{
   margin: 0px 0px 10px 0px;
   padding:12px;
   font-weight: 700;
   border-width: 4px;
-  font-size: 22px;
+  font-size: 24px;
   background-color: rgba(0,0,0,0);
 }
-//smaller large info tag to make it work for referral summary and advice summary
