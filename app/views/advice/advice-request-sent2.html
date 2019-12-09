@@ -176,7 +176,7 @@ NHS e-referral Service
     <dl class="" style="margin-top: -20px;">
       <!-- Status and action in side menu hide from here-->
       <!--  Status: Not submitted, Provider response required, Referrer to rerview response, Referrer to send information, Conversation ended, Advice converted -->
-      <dt><span class="nhsuk-tag__highlight nhsuk-tag-large">Referrer to review response</span></dt>
+      <dt><span class="nhsuk-tag__highlight nhsuk-tag-large">Provider response required</span></dt>
       <dd>
 
       <div class="nhsuk-heading-menu__actions">
@@ -190,11 +190,11 @@ NHS e-referral Service
             </button>
             <div id="myDropdown" class="dropdown-content">
               <p class="nhsuk-u-padding-left-3"><strong>Refer to this service</strong></p>
-              <a href="#">Patient to book</a>
-              <a href="#">Find appointments</a>
+              <a href="/search/referral-review-advice">Patient to book</a>
+              <a href="/appointments/referral-appointments-advice">Find appointments</a>
               <br>
               <p class="nhsuk-u-padding-left-3"><strong>or</strong></p>
-              <a href="#">Search for another service</a>
+              <a href="/search/search">Search for another service</a>
               <a href="end-conversation">End conversation</a>
             </div>
           </div>
@@ -255,7 +255,7 @@ NHS e-referral Service
           <h3>Advice conversation</h3>
          <div class="nhsuk-heading-links">
             <ul>
-       <!--          <li><a href="/advice/advice-request-clinical-info">Clinical information</a></li> -->
+                 <li><a href="advice-request-clinical-info">Clinical information</a></li> 
                 <li><a href="print-advice-request">Download summary</a></li>
             </ul>
 
@@ -304,11 +304,11 @@ NHS e-referral Service
         </div>
       </div>
       
-                 <p class="nhsuk-message-name">.</p>
+          <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
     
-<!--                <div class="nhsuk-message nhsuk-message_requester">
-                <p>Clinical information has been added or changed <a href="#">View clinical information</a></p>
-            </div> -->
+            <div class="nhsuk-message nhsuk-message_requester">
+                <p>Clinical information has been added or changed <a href="advice-request-clinical-info">View clinical information</a></p>
+            </div>
 
 
        
@@ -388,7 +388,7 @@ NHS e-referral Service
 
       </div>
 
-      <a href="advice-request-sent2" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</a>
+      <a href="advice-request-clinical-info" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</a>
 
     </div>
   </div>

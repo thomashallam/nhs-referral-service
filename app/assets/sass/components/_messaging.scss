@@ -85,11 +85,11 @@ p:first-child{
 }
 .message-panel{
   // max-height: 300px;
-  min-height: 300px;
+  min-height: 150px;
   position:relative;
   padding-top: 16px;
   margin-bottom: 16px;
-  overflow:scroll;
+  overflow: none;
   top: -1px;
   //border-bottom: 1px solid $color_nhsuk-grey-3;
   border-top: 1px solid $color_nhsuk-grey-3;
