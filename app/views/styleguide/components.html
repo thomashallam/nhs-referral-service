@@ -2,7 +2,7 @@
 
 {% block beforeContent %}
 {{ hero({
-"heading": "e Referral service",
+"heading": "e-Referral Service",
 "text": "Style, patterns and components"
 }) }}
 {% endblock %}
@@ -145,17 +145,33 @@
 
       </div>
       <h3>Information Tags</h3>
+      <p>Currently being used for search results, service details, summary page warnings</p>
       <div class="styleguide-example">
 
         <span class="nhsuk-tag__default">Triage only</span>
+        <span class="nhsuk-tag__highlight">Waiting for response</span>
         <span class="nhsuk-tag__success">Good capacity</span>
         <span class="nhsuk-tag__warning">Limited capacity</span>
-        <span class="nhsuk-tag__highlight">Waiting for response</span>
+        <span class="nhsuk-tag__warning_invert">Overdue</span>
 
 
       </div>
 
-      <h3>Case status tags</h3>
+      
+      <h3>Medium information tags </h3>
+      <p>Currently being used for advice pages</p>
+      <div class="styleguide-example">
+
+     
+          <span class="nhsuk-tag__highlight nhsuk-tag-medium">Not submitted</span>
+          <span class="nhsuk-tag__highlight nhsuk-tag-medium">Provider to respond</span>
+          <span class="nhsuk-tag__highlight nhsuk-tag-medium">Conversation ended</span>
+
+
+        
+      </div>
+      <h3>Large information tags</h3>
+      <p>Currently being used for referral summary screens</p>
       <div class="styleguide-example">
 
      
@@ -685,7 +701,7 @@
                 <div class="styleguide-example">
                     <!-- MESSAGE PANEL -->
       <div class="message-panel">
-          <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
+          <p class="nhsuk-message-name"><strong>POLLARD, Steven (Dr)</strong> Mon 09-Dec-2019 11:19</p>
   
           <div class="nhsuk-message nhsuk-message_requester">
             <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
@@ -699,7 +715,7 @@
   
           <div class="nhsuk-message_responder--wrapper">
   
-            <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
+              <p class="nhsuk-message-name"><strong>NAYLOR, Amanda (Dr)</strong> Mon 09-Dec-2019 14:22</p>
   
   
             <div class="nhsuk-message nhsuk-message_responder">

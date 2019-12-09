@@ -4,7 +4,7 @@
 
 .nhsuk-tag {
 
-  background-color: $color_nhsuk-white;
+  background-color: transparent;
   display: inline-block;
   font-family: Frutiger, sans-serif;
   font-size: 14px;
@@ -25,7 +25,9 @@
 .nhsuk-tag__warning{
     @extend .nhsuk-tag;
   border-color: $color_nhsuk-red;
-  color: $color_nhsuk-red;
+  color:  $color_nhsuk-white;
+  background-color: $color_nhsuk-red;
+
 }
 
 .nhsuk-tag__warning_invert{
@@ -53,7 +55,7 @@ border-color: $color_nhsuk-blue;
   font-weight: 700;
   border-width: 4px;
   font-size: 18px;
-  background-color: rgba(0,0,0,0);
+  background-color: transparent;
 }
 
 .nhsuk-tag-large{
