@@ -6,7 +6,12 @@
 {% block pageScripts %}
 <script type="text/javascript" src="/js/search.js"></script>
 <script type="text/javascript" src="/js/auto.js"></script>
+<script type="text/javascript" src="/js/reveal.js"></script>
 <script type="text/javascript" src="/js/action-menu.js"></script>
+<script type="text/javascript" src="/js/sort.js"></script>
+<script type="text/javascript" src="/js/sub-nav"></script>
+<script type="text/javascript" src="/js/reveal-test.js"></script>
+
 {% endblock %}
 {% block pageTitle %}
 NHS e-referral Service
@@ -65,7 +70,12 @@ NHS e-referral Service
 <nav class="nhsuk-grey-background patient-info">
   <ul role="navigation">
     <li><span style=""><strong>UBRN: </strong> 3452 1007 6779</span></li>
-    <li>Patient: <a href="Patient name">EVANS, David (Mr)</a></li>
+    <li>Patient: <a href="Patient name">EVANS, David (Mr) <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+      <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+      </g>
+    </svg></a></li>
     <li><strong>Gender: </strong> Male</li>
     <li>30 years (4 June 1988)</li>
   </ul>
@@ -82,71 +92,356 @@ NHS e-referral Service
 
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
         <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="https://marvelapp.com/a8e8aee/screen/60100967">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                  </svg>
+                  Go back to worklists</a>
+              </div>
+            <h1 class="nhsuk-heading-l">Referral summary</h1>
+
             <div class="nhsuk-heading-links-container">
-              <h1 class="nhsuk-heading-l">Referral summary</h1>
               <div class="nhsuk-heading-links">
                 <ul>
-      
+                  <li><a href="/advice/advice-request-ended">Advice summary</a></li>
                   <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
-                  <li><a href="#">Advice and guidance</a></li>
                   <li><a href="#">Related UBRN</a></li>
-                </ul>
-      
-              </div>
+                </ul>      
+              </div> 
+
             </div>
 
-
+<!--                  <div class="panel panel-border-wide alert-default">
+                    <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
+                      Missing referral letter / clinical information
+                    </h2>
+              
+                  </div> -->
             </div>
             </div>
             <div class="nhsuk-panel nhsuk-panel--grey" style="margin-top: 0px">
-  <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-three-quarters flex-container">
-              
+<!-- hide the actions menu on rhs and moved it into grid - the current alignment is not accessible as off page and all actions in menu appears off page on small device screens 
+ -->  
+ <div class="nhsuk-grid-row">   
+          <div class="nhsuk-grid-column-two-thirds flex-container">
               <div class="flex-child">
-                  <span class="nhsuk-tag__highlight nhsuk-tag-large">REFERRAL CANCELLED</span>
+                  <span class="nhsuk-tag__highlight nhsuk-tag-large">CANCELLED REFERRAL</span>
               </div>
-
-          
+          </div>
+  <div class="nhsuk-grid-column-one-quarter">
+      <form class="nhsuk-form" action="referral-confirmation">
+          <button class="nhsuk-button--ers" type="submit">
+            Remove from worklist
+          </button>
+        </form>
+  </div>
 </div>
+ <!-- hide to here  -->
+
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
-      <dl class="app-check-your-answers app-check-your-answers--short app-check-your-answers--no-border">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Outcome
-          </dt>
-          <dd class="app-check-your-answers__answer">
-            Referral no longer required
-          </dd>
+  <div class="nhsuk-grid-column-full">
+    
+    <dl class="app-check-your-answers app-check-your-answers--short app-check-your-answers--no-border">
+       
+      
+        <!-- <div class="app-check-your-answers__contents">
+            <dt class="app-check-your-answers__question">
+                <div class="flex-child">
+                    <span class="nhsuk-tag__highlight nhsuk-tag-large">BOOKED</span>
+                </div>
+            </dt>
+            <dd class="app-check-your-answers__answer">
+                <div class="nhsuk-heading-menu__actions">
+
+
+                    <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn">Actions
+                        <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+          
+                          <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                          </g>
+                        </svg>
+          
+          
+                      </button>
+                      <div id="myDropdown" class="dropdown-content">
+          
+                        <a href="">Add referral letter</a>
+                        <a href="/rebook/rebook-appointments">Rebook appointment</a>
+                        <a href="/cancel/cancel-reasons">Cancel appointment</a>
+                        <a href="/search/search">Change services</a>
+                      </div>
+                    </div>
+          
+                  </div>
+            </dd>
+          </div> -->
+
+          <div class="app-check-your-answers__contents">
+              <dt class="app-check-your-answers__question">
+                Cancellation date:
+              </dt>
+              <dd class="app-check-your-answers__answer">
+                1 December 2019
+              </dd>
+            </div>
+          <div class="app-check-your-answers__contents">
+              <dt class="app-check-your-answers__question">
+                Reason:
+              </dt>
+              <dd class="app-check-your-answers__answer">
+                Treatment no longer required
+              </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+              <dt class="app-check-your-answers__question">
+                 Comments:
+              </dt>
+              <dd class="app-check-your-answers__answer">
+                Thank you for referring into our triage service. After careful assessment of the patients knee injury (see attached x-ray). I don't believe any further treatment is required within secondary care. 
+                Any ongoing treatment should be managed in consultation with their GP.
+              </dd>
+            </div>
+
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+           Service: 
+        </dt>
+        <dd class="app-check-your-answers__answer">
+                    
+                    <a class="service-details-link" data-target="service-details-1">The Yorkshire Clinic </a>
+                    <br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
+                    <div class="service-details-content" id="service-details-1">
+                        <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+                          BRADFORD ROAD, BINGLEY, WEST YORKSHIRE, BD16 1TW <br>
+                            Professional Phone: 01274 550621 Patient Phone: 01274 550621 <br>
+                            Email: RHC.York-Referral-Team@nhs.net   </p>
+                
+                            <dl class="nhsuk-body-s">
+                              <dt>Indicative treatment wait</dt>
+                              <dd>14 weeks</dd>
+                            </dl>
+                
+                          <dl class="nhsuk-body-s">
+                            <dt>Conditions</dt>
+                
+                            <dd>Inguinal Hernia
+                                Umbilical Hernia
+                                Femoral Hernia
+                                Abdominal Hernia
+                                Recurrent Hernia
+                                Epigastric hernia
+                                Primary and Single
+                                
+                                For further information about our Hospital, Services & Treatments, <a href="">click here</a></dd>
+                                <dt>Procedures performed</dt>
+                                <dd>Removal prosthetic material from previous repair incision hernia 
+                                    Repair of ventral hernia 
+                                    Removal prosthetic material from previous repair ventral hernia 
+                                    Repair of other hernia of abdominal wall 
+                                    Primary repair of inguinal hernia 
+                                    Repair of recurrent inguinal hernia 
+                                    Primary repair of femoral hernia 
+                                    Removal prosthetic material from previous repair femoral hernia 
+                                    Repair of recurrent femoral hernia 
+                                    Removal prosthetic material from previous repair umbilical hernia 
+                                    Repair of umbilical hernia 
+                                    Bilateral herniotomy 
+                                    Unilateral herniotomy 
+                                    Ligation of patent processus vaginalis 
+                                    Simple excision of inguinal hernial sac 
+                                    Plastic operations on umbilicus 
+                                    Lapraposcopic hernia</dd>
+                            <dt>Exclusions</dt>
+                            <dd>A patient who has an unstable mental condition and is receiving psychiatric treatment.
+                                Surgery for patients under 18 years of age
+                            </dd>
+                            <dt>Suggested investigations</dt>
+                            <dd>None</dd>
+                          </dl>
+                         
+                      </div>
+                 
+
+                  <!-- <a class="service-details-link" data-target="view-full-shortlist"><p><br>View full shortlist</a>  </p>
+                  <div class="service-details-content" id="view-full-shortlist">
+
+                    <a class="service-details-link" data-target="service-details-2">The Yorkshire Clinic 2 </a><span class="nhsuk-tag__default">Telephone appointments</span>
+                    <br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
+                    <div class="service-details-content" id="service-details-2">
+                        <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+                          BRADFORD ROAD, BINGLEY, WEST YORKSHIRE, BD16 1TW <br>
+                            Professional Phone: 01274 550621 Patient Phone: 01274 550621 <br>
+                            Email: RHC.York-Referral-Team@nhs.net   </p>
+                
+                            <dl class="nhsuk-body-s">
+                              <dt>Indicative treatment wait</dt>
+                              <dd>14 weeks</dd>
+                            </dl>
+                
+                          <dl class="nhsuk-body-s">
+                            <dt>Conditions</dt>
+                
+                            <dd>Inguinal Hernia
+                                Umbilical Hernia
+                                Femoral Hernia
+                                Abdominal Hernia
+                                Recurrent Hernia
+                                Epigastric hernia
+                                Primary and Single
+                                
+                                For further information about our Hospital, Services & Treatments, <a href="">click here</a></dd>
+                                <dt>Procedures performed</dt>
+                                <dd>Removal prosthetic material from previous repair incision hernia 
+                                    Repair of ventral hernia 
+                                    Removal prosthetic material from previous repair ventral hernia 
+                                    Repair of other hernia of abdominal wall 
+                                    Primary repair of inguinal hernia 
+                                    Repair of recurrent inguinal hernia 
+                                    Primary repair of femoral hernia 
+                                    Removal prosthetic material from previous repair femoral hernia 
+                                    Repair of recurrent femoral hernia 
+                                    Removal prosthetic material from previous repair umbilical hernia 
+                                    Repair of umbilical hernia 
+                                    Bilateral herniotomy 
+                                    Unilateral herniotomy 
+                                    Ligation of patent processus vaginalis 
+                                    Simple excision of inguinal hernial sac 
+                                    Plastic operations on umbilicus 
+                                    Lapraposcopic hernia</dd>
+                            <dt>Exclusions</dt>
+                            <dd>A patient who has an unstable mental condition and is receiving psychiatric treatment.
+                                Surgery for patients under 18 years of age
+                            </dd>
+                            <dt>Suggested investigations</dt>
+                            <dd>None</dd>
+                          </dl>
+                      </div> 
+                      <p></p>
+                      <a class="service-details-link" data-target="service-details-3">The Yorkshire Clinic 3 </a><span class="nhsuk-tag__warning">Limited capacity</span>
+                      <br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
+                      <div class="service-details-content" id="service-details-3">
+                          <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
+                            BRADFORD ROAD, BINGLEY, WEST YORKSHIRE, BD16 1TW <br>
+                              Professional Phone: 01274 550621 Patient Phone: 01274 550621 <br>
+                              Email: RHC.York-Referral-Team@nhs.net   </p>
+                  
+                              <dl class="nhsuk-body-s">
+                                <dt>Indicative treatment wait</dt>
+                                <dd>14 weeks</dd>
+                              </dl>
+                  
+                            <dl class="nhsuk-body-s">
+                              <dt>Conditions</dt>
+                  
+                              <dd>Inguinal Hernia
+                                  Umbilical Hernia
+                                  Femoral Hernia
+                                  Abdominal Hernia
+                                  Recurrent Hernia
+                                  Epigastric hernia
+                                  Primary and Single
+                                  
+                                  For further information about our Hospital, Services & Treatments, <a href="">click here</a></dd>
+                                  <dt>Procedures performed</dt>
+                                  <dd>Removal prosthetic material from previous repair incision hernia 
+                                      Repair of ventral hernia 
+                                      Removal prosthetic material from previous repair ventral hernia 
+                                      Repair of other hernia of abdominal wall 
+                                      Primary repair of inguinal hernia 
+                                      Repair of recurrent inguinal hernia 
+                                      Primary repair of femoral hernia 
+                                      Removal prosthetic material from previous repair femoral hernia 
+                                      Repair of recurrent femoral hernia 
+                                      Removal prosthetic material from previous repair umbilical hernia 
+                                      Repair of umbilical hernia 
+                                      Bilateral herniotomy 
+                                      Unilateral herniotomy 
+                                      Ligation of patent processus vaginalis 
+                                      Simple excision of inguinal hernial sac 
+                                      Plastic operations on umbilicus 
+                                      Lapraposcopic hernia</dd>
+                              <dt>Exclusions</dt>
+                              <dd>A patient who has an unstable mental condition and is receiving psychiatric treatment.
+                                  Surgery for patients under 18 years of age
+                              </dd>
+                              <dt>Suggested investigations</dt>
+                              <dd>None</dd>
+                            </dl>
+                        </div>
+                      </div>
+
+
+                    
+            </dd> -->
+
+
+
         </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question">
-            Comments
-          </dt>
-          <dd class="app-check-your-answers__answer">
-              After consulting the patient, we have agreed to cancel the referral as the patient is no longer experiencing any symptoms.
-          </dd>
-        </div>
-        </dl>
 
-
-
+      <!-- <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+         Appointment date:
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          Wednesday 4 November 2019
+        </dd>
       </div>
+      <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+           Appointment time:
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            09:00
+          </dd>
+        </div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Clinician:
+        </dt>
+        <dd class="app-check-your-answers__answer">
+          ALTAF, Noor (DR)
+        </dd>
+        <dd class="app-check-your-answers__answer">
 
+          </dd>
+      </div> -->
+  <!--      <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+
+          </dt>
+          <dd class="app-check-your-answers__answer">
+           <a class="nhsuk-u-margin-right-4" href="#">Print patient letter</a> <a href="#">Send patient email</a>  
+                    
+            <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Print patient letter</a>
+          <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Send patient email</a>
+          </dd>
+      </div> 
+             
+      </dl>-->
     </div>
+   </div> 
+</div>
 
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full nhsuk-u-margin-left-2">
+        <div class="nhsuk-heading-links-container">
+            <h2 class="nhsuk-heading-l">Referral details</h2>
+            <div class="nhsuk-heading-links">
+              <ul>
+                <li><a href="#">Download summary</a></li>
+              </ul>
+            </div>
+        </div>
   </div>
 
-</div>
-
-<div class="nhsuk-grid-row">
-<div class="nhsuk-grid-column-full nhsuk-u-margin-left-2">
-    <h2>Referrer</h2>
-    
+<div class="nhsuk-grid-column-full nhsuk-u-margin-left-2">    
     <dl class="app-check-your-answers app-check-your-answers--short app-check-your-answers--no-border">
       <div class="app-check-your-answers__contents">
         <dt class="app-check-your-answers__question">
-          Referred by
+          Referred by:
         </dt>
         <dd class="app-check-your-answers__answer">
           DIXON, Wasan (Dr)
@@ -154,7 +449,7 @@ NHS e-referral Service
       </div>
       <div class="app-check-your-answers__contents">
         <dt class="app-check-your-answers__question">
-          Organisation
+          Organisation:
         </dt>
         <dd class="app-check-your-answers__answer">
           Paxton Green Group Practice
@@ -162,15 +457,15 @@ NHS e-referral Service
       </div>
       <div class="app-check-your-answers__contents">
         <dt class="app-check-your-answers__question">
-          Clinical context
+          Clinical context:
         </dt>
         <dd class="app-check-your-answers__answer">
-          Routine
-        </dd>
-      </div>
-      <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
           Urology/Prostate
+        </dd>
+      </div>
+      <div class="app-check-your-answers__contents">
+        <dt class="app-check-your-answers__question">
+          Priority:
         </dt>
         <dd class="app-check-your-answers__answer">
           Routine
@@ -178,26 +473,26 @@ NHS e-referral Service
       </div>
       <div class="app-check-your-answers__contents">
         <dt class="app-check-your-answers__question">
-          Registered practice
+          Registered practice:
         </dt>
         <dd class="app-check-your-answers__answer">
           Paxton Green Group Practice
 
         </dd>
+
       </div>
 
 
     </dl>
 
-    <h2>Referral details</h2>
-    <div class="panel panel-border-wide alert-default">
+    <h2>Attachments</h2>
+<!--     <div class="panel panel-border-wide alert-default">
         <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
             Referral details have been added through your GP clinical system. Use your clinical system to update them.
         </h2>
   
-      </div>
-    <p class="nhsuk-body"><strong>Attachments</strong></p>
-    <p class="nhsuk-body"><a href="">Add an attachment</a></p>
+      </div> -->
+    <p class="nhsuk-body"><a href="">Add / update attachments</a></p>
     <table class="nhsuk-table">
 
         <thead class="nhsuk-table__head">
@@ -217,93 +512,98 @@ NHS e-referral Service
             </tr>
             </tbody>
             </table>
-            <h2>Clinical information</h2>
+
+
+
+     <!-- <h2>Clinical information</h2>
+    <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
+        <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+          <span class="nhsuk-details__summary-text">
+            Risk to others
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>This patient is not a risk to others</p>
+          
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
+        <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+          <span class="nhsuk-details__summary-text">
+            Reason for referral
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Patient has a knee injury</p>
+          
+        </div>
+      </details>
+      <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
+          <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+            <span class="nhsuk-details__summary-text">
+              Expectation of referral
+            </span>
+          </summary>
+          <div class="nhsuk-details__text">
+            <p>Injury management plan or treatment</p>
+          </div>
+        </details>
+        <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
+            <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+              <span class="nhsuk-details__summary-text">
+                Past medical history
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p><a href="">See medical record</a></p>
+            </div>
+          </details>
+          <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
+              <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+                <span class="nhsuk-details__summary-text">
+                  Allergies and adverse reaction
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <p>This patient has no known allergies</p>
+              </div>
+            </details>
             <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
                 <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
                   <span class="nhsuk-details__summary-text">
-                    Risk to others
+                    Findings
                   </span>
                 </summary>
                 <div class="nhsuk-details__text">
-                  <p>This patient is not a risk to others</p>
-                  
-                </div>
-              </details>
-              <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
-                <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
-                  <span class="nhsuk-details__summary-text">
-                    Reason for referral
-                  </span>
-                </summary>
-                <div class="nhsuk-details__text">
-                  <p>Patient has a knee injury</p>
-                  
+                  <p>Knee x-ray shows slight abbrasion to bone</p>
                 </div>
               </details>
               <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
                   <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
                     <span class="nhsuk-details__summary-text">
-                      Expectation of referral
+                      Family history
                     </span>
                   </summary>
                   <div class="nhsuk-details__text">
-                    <p>Injury management plan or treatment</p>
+                    <p>There is known family history of heart disease</p>
                   </div>
                 </details>
                 <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
                     <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
                       <span class="nhsuk-details__summary-text">
-                        Past medical history
+                        Social context
                       </span>
                     </summary>
                     <div class="nhsuk-details__text">
-                      <p><a href="">See medical record</a></p>
+                      <p>Patient was resident of Spain</p>
                     </div>
-                  </details>
-                  <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
-                      <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
-                        <span class="nhsuk-details__summary-text">
-                          Allergies and adverse reaction
-                        </span>
-                      </summary>
-                      <div class="nhsuk-details__text">
-                        <p>This patient has no known allergies</p>
-                      </div>
-                    </details>
-                    <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
-                        <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
-                          <span class="nhsuk-details__summary-text">
-                            Findings
-                          </span>
-                        </summary>
-                        <div class="nhsuk-details__text">
-                          <p>Knee x-ray shows slight abbrasion to bone</p>
-                        </div>
-                      </details>
-                      <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
-                          <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
-                            <span class="nhsuk-details__summary-text">
-                              Family history
-                            </span>
-                          </summary>
-                          <div class="nhsuk-details__text">
-                            <p>There is known family history of heart disease</p>
-                          </div>
-                        </details>
-                        <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
-                            <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
-                              <span class="nhsuk-details__summary-text">
-                                Social context
-                              </span>
-                            </summary>
-                            <div class="nhsuk-details__text">
-                              <p>Patient was resident of Spain</p>
-                            </div>
-                          </details>
-        
+                  </details> -->
+ 
+
+
 
     <h2>Additional requirements</h2>
-    <p class="nhsuk-body"><a href="">Add an attachment</a></p>
+    <p class="nhsuk-body"><a href="">Add / update requirements</a></p>
 
     <table class="nhsuk-table">
 
@@ -313,7 +613,6 @@ NHS e-referral Service
             <th class="nhsuk-table__header" scope="col">Description</th>
             <th class="nhsuk-table__header" scope="col">Status</th>
             <th class="nhsuk-table__header" scope="col">Comments</th>
-            <th class="nhsuk-table__header" scope="col">Action</th>
           </tr>
         </thead>
         <tbody class="nhsuk-table__body">
@@ -322,7 +621,6 @@ NHS e-referral Service
               <td class="nhsuk-table__cell ">Spanish translator required</td>
               <td class="nhsuk-table__cell ">Booked</td>
               <td class="nhsuk-table__cell ">None</td>
-              <td class="nhsuk-table__cell "><a href="">Remove</a></td>
             </tr>
             </tbody>
             </table>
