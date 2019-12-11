@@ -2,7 +2,7 @@
 
 {% block beforeContent %}
   {{ hero({
-    "heading": "e Referral service",
+    "heading": "NHS e-Referral Service",
     "text": "Prototypes and confidence levels from usability testing"
   }) }}
 {% endblock %}
@@ -44,7 +44,7 @@
          <div class="nhsuk-grid-row nhsuk-panel-group">
 
 
-              <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+              <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
                 <div class="nhsuk-panel">
                   <h3>Cancelled</h3> <p>Summary page following request cancellation</p>
                   <a class="nhsuk-button--ers" href="/summary/referral-summary-cancelled-referral">Start now</a>
@@ -52,12 +52,20 @@
               </div>
 
               
-            <div class="nhsuk-grid-column-one-half nhsuk-panel-group__item">
+            <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
                 <div class="nhsuk-panel">
                   <h3>Advice</h3> <p>Advice summary - conversation and clinical info</p>
                   <a class="nhsuk-button--ers" href="/advice/advice-request-sent2">Start now</a>
               </div>
              </div>
+
+
+             <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
+              <div class="nhsuk-panel">
+                <h3>Defer to provider</h3> <p>Defer to provider summary (with rebook journey)</p>
+                <a class="nhsuk-button--ers" href="/summary/referral-summary-defer-to-provider">Start now</a>
+            </div>
+           </div>
           </div>
           
       </div>
