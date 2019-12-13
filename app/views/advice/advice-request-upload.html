@@ -89,81 +89,77 @@ NHS e-referral Service
 {% endblock %}
 {% block content %}
 
-
-<!-- Page nav and action button -->
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
-    <!--     <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-grid-column-full">
         <div class="nhsuk-back-link">
-            <a class="nhsuk-back-link__link" href="/summary/referral-summary">
+            <a class="nhsuk-back-link__link" href="search-results">
               <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
               </svg>
-              Go back to referral summary</a>
+              Go back to search results</a>
           </div>
-        </div> -->
-
-          <div class="nhsuk-grid-column-two-thirds">
-
           <div class="nhsuk-heading-menu">
-           <!--  <h1 class="nhsuk-heading-l">Advice summary</h1>
-        -->     <div class="nhsuk-heading-links-container">
-              <h1 class="nhsuk-heading-l">Advice summary</h1>
-              <div class="nhsuk-heading-links">
-                <ul>
-                  <li><a href="#">Download summary</a></li>
-                </ul>
-              </div>
-          </div>
-        <!-- <div class="nhsuk-heading-links-container">
+            <h1 class="nhsuk-heading-l">Advice request</h1>
+<!--             <div class="nhsuk-heading-links-container">
                 <div class="nhsuk-heading-links">
-                  <ul>
-                    <li><a href="/advice/advice-request-clinical-info">View clinical information</a></li>
-                     <li><a href="/summary/referral-summary">Referral summary</a></li> 
-                     <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
-                    <li><a href="#">Related UBRN</a></li> 
-                   </ul>      
+                  <ul> -->
+<!--                       <li><a href="/advice/advice-request-clinical-info">View clinical information</a></li>
+ -->                    <!-- li><a href="/summary/referral-summary">Referral summary</a></li> -->
+<!--                     <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
+                    <li><a href="#">Related UBRN</a></li> -->
+<!--                   </ul>      
                 </div> 
   
               </div> -->
       
           </div>
     </div>
-
-  <div class="nhsuk-grid-column-one-thirds" >
-    <!-- <a href="#" style="text-decoration:underline;">Download summary</a> -->
-    <div class="nhsuk-heading-menu__actions" style="margin-bottom: 15px; margin-top: -15px; margin-left:20px;">
-      <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn" style="margin-left:16px;">Actions
-            <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
-
-              <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
-              </g>
-            </svg>
-          </button>
-
-          <div id="myDropdown" class="dropdown-content">
-              <p class="nhsuk-u-padding-left-3"><strong>Refer to this service</strong></p>
-              <a href="/search/referral-review-advice">Patient to book</a>
-              <a href="/appointments/referral-appointments-advice">Find appointments</a>
-              <br>
-              <p class="nhsuk-u-padding-left-3"><strong>or</strong></p>
-              <a href="/search/search">Search for another service</a>
-              <a href="end-conversation">End conversation</a>
-          </div>
-
-      </div>
-    </div>
-  </div>
 </div>
+
+<!-- Status and action above --> 
+  <!--
+    <div class="nhsuk-panel nhsuk-panel--grey" style="margin: 0px auto; z-index: 2">
+
+    <div class="nhsuk-grid-row">   
+        <div class="nhsuk-grid-column-two-thirds flex-container">
+            <div class="flex-child">
+                <span class="nhsuk-tag__highlight nhsuk-tag-large">Provider response required</span>
+            </div>
+        </div>
+    <div class="nhsuk-grid-column-one-quarter">
+    <div class="nhsuk-heading-menu__actions">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Actions
+              <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+
+                <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <polygon id="Rectangle" fill="#f1f1f1" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                </g>
+              </svg>
+            </button>
+
+            <div id="myDropdown" class="dropdown-content">
+                <p class="nhsuk-u-padding-left-3"><strong>Refer to this service</strong></p>
+                <a href="#">Patient to book</a>
+                <a href="#">Find appointments</a>
+                <br>
+                <p class="nhsuk-u-padding-left-3"><strong>or</strong></p>
+                <a href="#">Search for another service</a>
+                <a href="end-conversation">End conversation</a>
+              </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</div> 
+-->
 
 
 <div class="nhsuk-grid-row"  >
   <div class="nhsuk-grid-column-one-third">
-<!--       <a href="#" style="text-decoration:underline;">Download request</a>
- -->
-    <div class="nhsuk-panel nhsuk-panel--grey" style="margin-top: 0px;">
-    
+    <div class="nhsuk-panel nhsuk-panel--grey" style="margin-top: -10px;">
+
 
     <!--     <div class="nhsuk-search-input__item">
       <label class="nhsuk-label nhsuk-label__strong">
@@ -180,10 +176,10 @@ NHS e-referral Service
     <dl class="" style="margin-top: -20px;">
       <!-- Status and action in side menu hide from here-->
       <!--  Status: Not submitted, Provider response required, Referrer to rerview response, Referrer to send information, Conversation ended, Advice converted -->
-      <dt></dt>
+      <dt><span class="nhsuk-tag__highlight nhsuk-tag-medium">Not submitted</span></dt>
       <dd>
-          <span class="nhsuk-tag__highlight nhsuk-tag-medium">Provider response required</span>
-     <!--  <div class="nhsuk-heading-menu__actions">
+
+      <!-- <div class="nhsuk-heading-menu__actions">
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Actions
               <svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
@@ -286,7 +282,6 @@ NHS e-referral Service
       <dd></dd>
     </dl>
   </div>
-
 </div>
 
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-top-2" style="margin-top: -20px;">
@@ -312,19 +307,22 @@ NHS e-referral Service
           </div>
       </div> -->
       <div class="nhsuk-heading-links-container">
+          <h3>Advice conversation</h3>
+<!--           <div class="nhsuk-heading-links">
+            <ul>
+                <li><a href="/advice/advice-request-clinical-info">Clinical information</a></li>
+                <li><a href="print-advice-request">Download summary</a></li>
+            </ul>
 
-            <h3>Advice conversation</h3>
-            
-
-
-       </div>
+          </div> -->
+        </div>
 
     <div class="nhsuk-form-group">
        
 
       <!-- MESSAGE PANEL -->
-      <div class="message-panel">
-          <p class="nhsuk-message-name"><strong>POLLARD, Steven (Dr)</strong> Mon 09-Dec-2019 11:19</p>
+      <!-- <div class="message-panel"> -->
+         <!--  <p class="nhsuk-message-name"><strong><a href="#">POLLARD, Steven (Dr)</a> Today</strong> 11:19</p>
   
           <div class="nhsuk-message nhsuk-message_requester">
             <p>Please can you advise - I have this 51 year old lady who had a previous knee injury following a fall -
@@ -333,15 +331,13 @@ NHS e-referral Service
               Please can you advise on what would be the best appropriate treatment option for this patient?</p>
           </div>
           <div class="nhsuk-message nhsuk-message_requester">
-            <p><strong>Attachment:</strong> <a href="#">Knee excercises following trauma.docx</a>
-            </br>Detailed overview of patient's exercise routine for the last 5 weeks.</p>
+            <p><strong>Attachment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
           </div>
   
           <div class="panel panel-border-wide alert-success-inline"><h1 class ="nhsuk-heading-xs">Request sent successfully</h1></div> 
 
 
-          <!--
-            <div class="nhsuk-message_responder--wrapper">
+          <div class="nhsuk-message_responder--wrapper">
   
             <p class="nhsuk-message-name"><strong><a href="#">NAYLOR, Amanda (Dr)</a> Today</strong> 14:22</p>
   
@@ -385,52 +381,61 @@ NHS e-referral Service
             <h3>Upload a file</h3>
 
 
-            <div class="nhsuk-upload-button-container">
-              <a href="advice-request-upload" class="nhsuk-button nhsuk-button--ers_reverse">Choose a file</a>
-              
-            </div>
+              <div class="nhsuk-upload-button-container">
+                <button class="nhsuk-button nhsuk-button--ers_reverse">Choose a file</button>
+                <input type="file" name="filefield" multiple="multiple">
+              </div>
               <!-- <button class="nhsuk-button nhsuk-button--ers_reverse" type="submit">
                 Link
               </button>-->
       
               <div class="nhsuk-grid-row">
                   <div class="nhsuk-grid-column-full">
+          
+                    
+                                         <hr class="nhsuk-u-margin-bottom-0">
+          
+                    <dl class="nhsuk-summary-list">
+          
+          
+          
+                      <div class="nhsuk-summary-list__row">
+          
+                        <dt class="nhsuk-summary-list__key">
+                      Knee excercises following trauma.docx
+          
+                        </dt>
+                        <dd class="nhsuk-summary-list__actions">
+                          <a href="advice-request-upload2" style="text-decoration:none;">Add file description</a>
+          
+                        </dd>
 
-                    <p>No files attached to send</p>
+          
+                        <dd class="nhsuk-summary-list__actions">
+                          <a href="#">Remove file</a>
+          
+                        </dd>
+                    </dl>
+          
                   </div>
                 </div>
  
-          </div>
 
-
- <!--      <hr class="nhsuk-u-margin-bottom-0 nhsuk-u-margin-top-0">
-          <dl class="nhsuk-summary-list">
-
-
-
-            <div class="nhsuk-summary-list__row">
-
-              <dt class="nhsuk-summary-list__key">
-                No files attached to send
-
-              </dt>
-
-            </div>
-          </dl>
-        </div> -->
-
-        <div class="nhsuk-grid-column-one-half">
-        <a href="provider-response" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</a>
 
         </div>
 
+        <!--        <div class="nhsuk-grid-column-one-half">
+
+        </div> -->
+
       </div>
 
+      <a href="advice-request-sent" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Send advice</a>
 
     </div>
   </div>
 
- </div>
+<!--   </div> -->
 </div>
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
   <div class="nhsuk-grid-column-one-half">
