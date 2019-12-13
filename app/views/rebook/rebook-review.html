@@ -122,16 +122,28 @@ NHS e-referral Service
     </div>
     
         <h4 class="nhsuk-heading-s">Reason for rebooking</h4>
-        <div class="nhsuk-date-input__item">
-                <select class="nhsuk-select nhsuk-body-xs" id="select-1" name="select-1" style="min-width:200px">
-                  <option value="select a distance" disabled>Select a reason</option>
-                  <option value="1">Patient is ill</option>
-                  <option value="2">Patient on holiday</option>
-                  <option value="3">Other reason</option>
-                
-                </select>
+
+        <div class="multiple-choice--hod nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="patient-ill" name="defer-reason" type="radio">
+              <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="patient-ill">
+                Patient is ill
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="patient-holiday" name="defer-reason" type="radio">
+              <label class="nhsuk-label nhsuk-radios__label" for="patient-holiday">
+                Patient on holiday
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="other-reason" name="defer-reason" type="radio">
+                <label class="nhsuk-label nhsuk-radios__label" for="patient-private">
+                  Other reason
+                </label>
               </div>
-        <br></br>
+          
+          </div>
         <!-- TEXT BOX AREA -->
         <p>Please provide any comments about the reason for rebooking</p>
 
@@ -139,28 +151,31 @@ NHS e-referral Service
         <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
         <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
 
-</div>
+    </div>
 
-
-   
-
-      </div>
-
+  </div>
+ 
 
 
 
 
 
-<div class="nhsuk-u-margin-top-4">
-      <form class="nhsuk-form" action="rebook-confirm">
-        <button class="nhsuk-button--ers" type="submit">
-          Continue
-        </button>
-      </form>
+        <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-left-4">
+
+
+            <div class="nhsuk-u-margin-top-4">
+                  <form class="nhsuk-form" action="rebook-confirm">
+                    <button class="nhsuk-button--ers" type="submit">
+                      Continue
+                    </button>
+                  </form>
+                  </div>
+        </div>
+
+
+
       </div>
     </div>
-  </div>
-</div>
 
 {% endblock %}
 
