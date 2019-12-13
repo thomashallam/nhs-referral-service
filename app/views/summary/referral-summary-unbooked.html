@@ -94,13 +94,6 @@ NHS e-referral Service
         <div class="nhsuk-grid-column-full">
             <h1 class="nhsuk-heading-l">Referral summary</h1>
 
-              <!--  tested sub-nav doesn't work           <nav class="sub-nav">
-                <ul>
-                    <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
-                    <li><a href="#">Advice and guidance</a></li>
-                    <li><a href="#">Related UBRN</a></li>
-                </ul>
-              </nav> -->
 
 
             <div class="nhsuk-heading-links-container">
@@ -108,18 +101,15 @@ NHS e-referral Service
                 <ul>
                   <li><a href="/advice/advice-request-ended">Advice summary</a></li>
                   <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
-                  <li><a href="#">Related UBRN</a></li>
+                  <li><a href="#">Related UBRN<svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                    <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                    </g></svg></a></li>
                 </ul>      
               </div> 
 
             </div>
 
-<!--                  <div class="panel panel-border-wide alert-default">
-                    <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
-                      Missing referral letter / clinical information
-                    </h2>
-              
-                  </div> -->
+
             </div>
             </div>
             <div class="nhsuk-panel nhsuk-panel--grey" style="margin-top: 0px">
@@ -127,7 +117,7 @@ NHS e-referral Service
  -->  
  <div class="nhsuk-grid-row">   
           <div class="nhsuk-grid-column-two-thirds flex-container">
-              <div class="flex-child">
+              <div class="flex-child" id="closed">
                   <span class="nhsuk-tag__highlight nhsuk-tag-large">NOT YET BOOKED</span>
               </div>
           </div>
@@ -259,7 +249,10 @@ NHS e-referral Service
                       </div>
                  
 
-                  <a class="service-details-link" data-target="view-full-shortlist"><p><br>View full shortlist</a>  </p>
+                  <a href="referral-summary-unbooked-shortlist-open#open"service-details-link" data-target="view-full-shortlist">
+                    <p><br>Show full shortlist<svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                      <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                      </g></svg></a>  </p>
                   <div class="service-details-content" id="view-full-shortlist">
 
                     <a class="service-details-link" data-target="service-details-2">The Yorkshire Clinic 2 </a><span class="nhsuk-tag__default">Telephone appointments</span>

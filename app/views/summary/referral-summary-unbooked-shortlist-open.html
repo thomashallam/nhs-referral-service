@@ -94,6 +94,8 @@ NHS e-referral Service
         <div class="nhsuk-grid-column-full">
             <h1 class="nhsuk-heading-l">Referral summary</h1>
 
+
+
             <div class="nhsuk-heading-links-container">
               <div class="nhsuk-heading-links">
                 <ul>
@@ -101,17 +103,13 @@ NHS e-referral Service
                   <li><a href="https://vibrant-mclean-37b45f.netlify.com/index-2.html">Referral history</a></li>
                   <li><a href="#">Related UBRN<svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
                     <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
-                    </g></svg></a></li> </ul>      
+                    </g></svg></a></li>
+                </ul>      
               </div> 
 
             </div>
 
-<!--                  <div class="panel panel-border-wide alert-default">
-                    <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
-                      Missing referral letter / clinical information
-                    </h2>
-              
-                  </div> -->
+
             </div>
             </div>
             <div class="nhsuk-panel nhsuk-panel--grey" style="margin-top: 0px">
@@ -119,8 +117,8 @@ NHS e-referral Service
  -->  
  <div class="nhsuk-grid-row">   
           <div class="nhsuk-grid-column-two-thirds flex-container">
-              <div class="flex-child">
-                  <span class="nhsuk-tag__highlight nhsuk-tag-large">TRIAGE RESPONSE</span>
+              <div class="flex-child" id="open">
+                  <span class="nhsuk-tag__highlight nhsuk-tag-large">NOT YET BOOKED</span>
               </div>
           </div>
   <div class="nhsuk-grid-column-one-quarter">
@@ -136,9 +134,11 @@ NHS e-referral Service
               </button>
 
               <div id="myDropdown" class="dropdown-content">
+<!--                 <a href="">Add referral letter</a>-->
+                <a href="/appointments/referral-appointments">Book appointment</a>
                 <!-- <a href="/cancel/cancel-reasons">Cancel appointment</a> -->
-                <a href="/search/search">Change service/s</a>
-                <a href="/triage/end-triage-request">End triage request</a>
+                <a href="/search/search">Change services</a>
+                <a href="/cancel-referral/cancel-referral">Cancel referral</a>
               </div>
 
           </div>
@@ -188,27 +188,10 @@ NHS e-referral Service
           </div> -->
 
 
-          <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__question">
-                Outcome:
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                Return to referrer with advice
-              </dd>
-            </div>
-            <div class="app-check-your-answers__contents">
-              <dt class="app-check-your-answers__question">
-                 Comments:
-              </dt>
-              <dd class="app-check-your-answers__answer">
-                Thank you for referring into our triage service. After careful assessment of the patients knee injury (see attached x-ray). I don't believe any further treatment is required within secondary care. 
-                Any ongoing treatment should be managed in consultation with their GP.
-              </dd>
-            </div>
-
+    
       <div class="app-check-your-answers__contents">
         <dt class="app-check-your-answers__question">
-           Service: 
+           Services: 
         </dt>
         <dd class="app-check-your-answers__answer">
                     
@@ -266,8 +249,11 @@ NHS e-referral Service
                       </div>
                  
 
-                  <!-- <a class="service-details-link" data-target="view-full-shortlist"><p><br>View full shortlist</a>  </p>
-                  <div class="service-details-content" id="view-full-shortlist">
+                  <a href="referral-summary-unbooked#closed">
+                    <p><br>Close shortlist<svg class="nhsuk-icon nhsuk-icon__arrow-down nhsuk-icon--ers" viewBox="0 0 150 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                      <g id="Arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Rectangle" fill="#415563" fill-rule="nonzero" transform="translate(75.000000, 75.000000) rotate(45.000000) translate(-75.000000, -75.000000) " points="75 75 97 53 97 97 53 97"></polygon>
+                      </g></svg></a>  </p>
+                  <div class="service-details-content" id="view-full-shortlist" style="display: block;">
 
                     <a class="service-details-link" data-target="service-details-2">The Yorkshire Clinic 2 </a><span class="nhsuk-tag__default">Telephone appointments</span>
                     <br><span>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</span>
@@ -376,7 +362,7 @@ NHS e-referral Service
 
 
                     
-            </dd> -->
+            </dd>
 
 
 
@@ -409,51 +395,48 @@ NHS e-referral Service
 
           </dd>
       </div> -->
-  <!--      <div class="app-check-your-answers__contents">
+      <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question">
 
           </dt>
           <dd class="app-check-your-answers__answer">
-           <a class="nhsuk-u-margin-right-4" href="#">Print patient letter</a> <a href="#">Send patient email</a>  
-                    
-            <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Print patient letter</a>
-          <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Send patient email</a>
+           <a class="nhsuk-u-margin-right-4" href="#">Print patient letter</a> <a href="#">Send patient email</a>            
+          <!--    <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Print patient letter</a>
+          <a class="nhsuk-button nhsuk-button--ers_secondary" href="#" type="submit">Send patient email</a> -->
           </dd>
-      </div> 
+      </div>
              
-      </dl>-->
-              
-     <div class="app-check-your-answers__contents">
-        <dt class="app-check-your-answers__question">
-        Triage Attachments:
-        </dt>
-        <dd class="app-check-your-answers__answer">
-            <table class="nhsuk-table">
-                <thead class="nhsuk-table__head">
-                  <tr class="nhsuk-table__row">
-                    <th class="nhsuk-table__header" scope="col">File name</th>
-                    <th class="nhsuk-table__header" scope="col">File description</th>
-                    <th class="nhsuk-table__header" scope="col">Added by</th>
-                    <th class="nhsuk-table__header" scope="col">Date added</th>
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                    <tr class="nhsuk-table__row">
-                      <td class="nhsuk-table__cell"><a href="">abdominal-ultrasound.pdf</a></td>
-                      <td class="nhsuk-table__cell ">Please see clinical attachment attached</td>
-                      <td class="nhsuk-table__cell ">SMITH, Steven (DR)</td>
-                      <td class="nhsuk-table__cell ">23 October 2019</td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    <p>
-              </dl>
-          </dd>
-      </div> 
-     
-   </div> 
-</div>
+      </dl>
+      
+<!--       <h5>Attachments:</h5>
+        
+      <table class="nhsuk-table">
+          <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">File name</th>
+              <th class="nhsuk-table__header" scope="col">File description</th>
+              <th class="nhsuk-table__header" scope="col">Added by</th>
+              <th class="nhsuk-table__header" scope="col">Date added</th>
+            </tr>
+          </thead>
+          <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><a href="">abdominal-ultrasound.pdf</a></td>
+                <td class="nhsuk-table__cell ">Please see clinical attachment attached</td>
+                <td class="nhsuk-table__cell ">SMITH, Steven (DR)</td>
+                <td class="nhsuk-table__cell ">23 October 2019</td>
+              </tr>
+              </tbody>
+              </table>
+              <p>
+        </dl> -->
+    </div>
 
+  </div>
+
+
+
+</div>
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full nhsuk-u-margin-left-2">
         <div class="nhsuk-heading-links-container">
@@ -514,12 +497,12 @@ NHS e-referral Service
     </dl>
 
     <h2>Attachments</h2>
-<!--     <div class="panel panel-border-wide alert-default">
+    <div class="panel panel-border-wide alert-default">
         <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
             Referral details have been added through your GP clinical system. Use your clinical system to update them.
         </h2>
   
-      </div> -->
+      </div>
     <p class="nhsuk-body"><a href="">Add / update attachments</a></p>
     <table class="nhsuk-table">
 
@@ -543,7 +526,7 @@ NHS e-referral Service
 
 
 
-     <!-- <h2>Clinical information</h2>
+     <h2>Clinical information</h2>
     <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
         <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
           <span class="nhsuk-details__summary-text">
@@ -625,7 +608,7 @@ NHS e-referral Service
                     <div class="nhsuk-details__text">
                       <p>Patient was resident of Spain</p>
                     </div>
-                  </details> -->
+                  </details>
  
 
 
