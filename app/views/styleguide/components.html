@@ -314,9 +314,11 @@
 
 
               </div>
+                <h3 id="closed">e-RS Expander</h3>
 
               <div class="styleguide-example">
-                <h3>e-RS Expander</h3>
+                <p>Used on the clinical details expander</p>
+                <div style="text-align: right; margin-top: -20px;"><a href="components#open">Open all</a></div>
                 <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
                     <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
                       <span class="nhsuk-details__summary-text">
@@ -330,7 +332,7 @@
                   <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey">
                     <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
                       <span class="nhsuk-details__summary-text">
-                        Social context
+                        Family history
                       </span>
                     </summary>
                     <div class="nhsuk-details__text">
@@ -339,6 +341,34 @@
                   </details>
 
               </div>
+
+                  <h3 id="open">e-RS Expander (open)</h3>
+
+              <div class="styleguide-example">
+                  <p>Used on the clinical details expander</p>
+                  <div style="text-align: right; margin-top: -20px;"><a href="components#closed">Close all</a></div>
+                  <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey" open>
+                      <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+                        <span class="nhsuk-details__summary-text">
+                          Social context
+                        </span>
+                      </summary>
+                      <div class="nhsuk-details__text">
+                        <p>Patient was resident of Spain</p>
+                      </div>
+                    </details>
+                    <details class="nhsuk-details nhsuk-expander nhsuk-expander--ers-grey" open>
+                      <summary class="nhsuk-details__summary nhsuk-details--ers-grey">
+                        <span class="nhsuk-details__summary-text">
+                          Family history
+                        </span>
+                      </summary>
+                      <div class="nhsuk-details__text">
+                        <p>Patient was resident of Spain</p>
+                      </div>
+                    </details>
+  
+                </div>
 
               <h3>Table with sortable headers</h3>
               <div class="styleguide-example">
@@ -719,7 +749,8 @@
                         </div>
 
                         <div class="nhsuk-message nhsuk-message_requester">
-                          <p><strong>Attachment:</strong> <a href="#">Knee excercises following trauma.docx</a></p>
+                          <p><strong>Attachment:</strong> <a href="#">Knee excercises following trauma.docx</a>
+                          <br>Please see details of patients exercise routines for the last 5 weeks.</p>
                         </div>
                 
                         <div class="nhsuk-message_responder--wrapper">
@@ -878,11 +909,11 @@
           
 
 
-              <h3>Details reveal</h3>
+              <h3>Service details reveal</h3>
               <div class="styleguide-example">
                   
-                  <h2 class="service-details-link" data-target="service-details-1">The Yorkshire Clinic </h2>
-                  <p class="nhsuk-hint">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</p>
+                  <p><a class="service-details-link" data-target="service-details-1"><strong>The Yorkshire Clinic</strong><span class="nhsuk-tag__warning">Limited capacity</span></a>
+                  <br>Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</p>
                   <div class="service-details-content" id="service-details-1">
                       <p class="nhsuk-body-s"><strong>Contact details</strong> <br>
                         BRADFORD ROAD, BINGLEY, WEST YORKSHIRE, BD16 1TW <br>
