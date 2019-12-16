@@ -15,5 +15,5 @@ module.exports = {
   useCookieSessionStore: 'true',
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: true,
+  useDocumentation: 'true'
 }

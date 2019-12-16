@@ -86,9 +86,13 @@ NHS e-referral Service
                 <!-- NEW HTML -->
                 <div class="nhsuk-grid-column-full">
                   <div class="nhsuk-form">
+                   
+                   
+                   
 
 
                       <!--SEARCH GOES HERE -->
+                 <form class="nhsuk-form" action="search-results">
 
                         <div class="nhsuk-form-group">
                           <div class="nhsuk-grid-row">
@@ -98,7 +102,7 @@ NHS e-referral Service
                         Search term(s)
                       </label>
                       <select id="autoselect" name="autocomplete" class="nhsuk-u-input--width-5">
-                        <option value="searchcriteria"></option>
+                        <option value="{{ data['autocomplete'] }}"></option>
                         <option id='Surgery - Not Otherwise Specified / Hernias'>Surgery - Not Otherwise Specified / Hernias</option>
                         <option id='SNOMED Clinical Term'>SNOMED Clinical Term</option>
                         <option id='Abdominal wall hernia procedure'>Abdominal wall <code>hernia</code> procedure</option>
@@ -178,6 +182,7 @@ NHS e-referral Service
                         <option id='Named Clinician'>Named Clinician</option>
                         <option id='Davis, Jonathan Hernia (Mr)'>Davis, Jonathan Hernia (Mr)<br> Nuffield Health</option>
                         <option id="">Moorhouse, Joanna (Mrs) <br> Leeds Teaching Hospitals NHS Trust</option>
+                        <option id="">Bircher,Jane</option>
                         <option id="">Singh, Jaswinder (Mr) <br> Mid Yorkshire Hospitals NHS Trust + 2 more</option>
                         <option id="">Smith, Paul (Dr) <br> BMI Healthcare</option>
                         <option id="">Smith, Paul (Dr) <br> Spire Leeds</option>
@@ -218,7 +223,7 @@ NHS e-referral Service
                     </div>
 
 
-
+                
                     <!-- END FORM GROUP -->
 
 
@@ -299,7 +304,10 @@ NHS e-referral Service
                     <div class="nhsuk-form-group">
                       <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
-                            <a class="nhsuk-button--ers" href="search-results">Search</a>
+<!--                             <a class="nhsuk-button--ers" href="search-results">Search</a>-->
+                                <button class="nhsuk-button--ers" type="submit">Search</button>
+                              </form>
+
                         </div>
                       </div>
                     </div>

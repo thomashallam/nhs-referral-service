@@ -1,9 +1,9 @@
 accessibleAutocomplete.enhanceSelectElement({
  showNoOptionsFound: true,
- defaultValue: '',
+ defaultValue: '' ,
  showAllValues: false,
  autoselect: true,
  placeholder: "Search by specialty, clinical term or named clinician",
- selectElement: document.querySelector('#autoselect')
+ selectElement: document.querySelector('#autoselect'),
 
 })
