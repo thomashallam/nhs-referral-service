@@ -15,7 +15,7 @@ NHS e-referral Service
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container-fluid nhsuk-header__container">
     <div class="nhsuk-header__logo">
-      <a class="nhsuk-header__link" href="/appointments" aria-label="NHS homepage">
+      <a class="nhsuk-header__link" href="search" aria-label="NHS homepage">
         <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
           <path fill="#fff" d="M0 0h40v16H0z"></path>
           <path fill="#005eb8"
@@ -69,7 +69,7 @@ NHS e-referral Service
     <li>30 years (4 June 1988)</li>
   </ul>
   <div class="nhsuk-close">
-    <a class="" href="/summary/referral-summary">Close
+    <a class="" href="">Close
       <svg class="nhsuk-icon nhsuk-icon--ers nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
 </svg></a>
@@ -82,100 +82,38 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
     <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="rebook-appointments">
+      <a class="nhsuk-back-link__link" href="/rebook/rebook-review">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back to choose an appointment</a>
+        Go back to reason for rebooking</a>
     </div>
 
 </div>
 
 
+    </div>
 
-<div class="nhsuk-grid-column-full nhsuk-u-margin-top-4">
-  <div class="panel panel-border-wide alert-default">
-    <h1 class="nhsuk-heading-s">
+<!-- A meta tag that redirects after 20 seconds -->
+<meta http-equiv="refresh" content="20;url=rebook-confirm">
 
-      Check these details before you continue
-  </h1>
+<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-left">
+  <div class="nhsuk-grid-column-three-quarters" style="padding-left:10%; padding-right: 10%; text-align: center;">
+
+      <h2 class="nhsuk-heading-m">Your request is being processed</h2>
+      
+      <p><img src="/images/spinner.png" height="125px" alt="Request being processed - please wait. It can take up to 2 minutes."></img></p>
+      <p>Please wait - this may take up to 2 minutes</p>
+
+  </div>
+</div>
+
+
 
 
   </div>
-  </div>
 
-
-    </div>
-
-
-<div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-left-2">
-  <div class="nhsuk-grid-column-one-half">
-
-    <div class="nhsuk-list">
-      <h2 class="nhsuk-heading-m">Appointment you have chosen</h2>
-      <h4 class="nhsuk-heading-s">The Yorkshire Clinic</h4>
-      <p class="nhsuk-hint">Adult Hernia Repair NHS Clinic - The Yorkshire Clinic - NVC</p>
-  
-      <p><strong>Date</strong></br>Thursday 4th November 2019</p>
-      <p><strong>Time</strong></br>10:00am</p>
-
-    </div>
-    
-        <h4 class="nhsuk-heading-s">Reason for rebooking</h4>
-
-        <div class="multiple-choice--hod nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="patient-ill" name="defer-reason" type="radio">
-              <label class="nhsuk-label nhsuk-radios__label nhsuk-radios__label--s" for="patient-ill">
-                Patient is ill
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="patient-holiday" name="defer-reason" type="radio">
-              <label class="nhsuk-label nhsuk-radios__label" for="patient-holiday">
-                Patient on holiday
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="other-reason" name="defer-reason" type="radio">
-                <label class="nhsuk-label nhsuk-radios__label" for="patient-private">
-                  Other reason
-                </label>
-              </div>
-          
-          </div>
-        <!-- TEXT BOX AREA -->
-        <p>Please provide any comments about the reason for rebooking</p>
-
-                
-        <textarea class="nhsuk-textarea nhsuk-u-margin-bottom-1" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-        <p class="nhsuk-hint nhsuk-u-margin-top-0 nhs-body-s">You have 2,000 characters remaining.</p>
-
-    </div>
-
-  </div>
- 
-
-
-
-
-
-        <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-left-4">
-
-
-            <div class="nhsuk-u-margin-top-4">
-                  <form class="nhsuk-form" action="rebooking-spinner">
-                    <button class="nhsuk-button--ers" type="submit">
-                      Confirm
-                    </button>
-                  </form>
-                  </div>
-        </div>
-
-
-
-      </div>
-    </div>
+</div>
 
 {% endblock %}
 
