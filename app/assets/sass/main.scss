@@ -27,6 +27,9 @@
 @import 'components/sub-navigation';
 @import 'components/sub-nav.scss';
 @import 'components/service-details.scss';
+@import 'components/tabs';
+@import 'components/modal';
+@import 'components/scrolling-tabs';
 
 
 
@@ -82,7 +85,32 @@ margin-bottom: 8px !important;
   border-right: 1px solid $color_nhsuk-grey-4;
 }
 
+// STUFF FROM DAVES VERSION //
 
+.nhsuk-link-button{
+  height: 38px;
+  line-height: 38px;
+  vertical-align: middle;
+  padding: 4px;
+}
+
+.nhsuk-panel--s .right-aligned{
+  background-color: $color_nhsuk-grey-5;
+  padding: 16px;
+  margin: 0;
+  float:right;
+}
+
+.filter-group{
+  display: block;
+  float: left;
+}
+.flex-container{
+  display: flex;
+:first-child{
+  margin-right: 32px;
+}
+}
 
 // STYLEGUIDE //
 
