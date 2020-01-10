@@ -82,7 +82,7 @@ NHS e-referral Service
 <div class="nhsuk-grid-row nhsuk-u-margin-top-4">
     <div class="nhsuk-width-container-fluid">
     <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="/summary/referral-summary">
+      <a class="nhsuk-back-link__link" href="additional-requirements-leave">
         <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
@@ -98,65 +98,62 @@ NHS e-referral Service
 <div class="nhsuk-width-container-fluid">
   <div class="nhsuk-grid-row nhsuk-u-margin-top-4 nhsuk-u-margin-left">
 
-      <h2 class="nhsuk-heading-m">Referral attachments</h2>
+      <h2 class="nhsuk-heading-m">Update additional requirments</h2>
 
-      <div class="panel panel-border-wide alert-default">
-        <h2 class="nhsuk-heading-s nhsuk-u-padding-top-3">
-         Referral letter / clinical information was previously attached to an advice request
-        </h2>
-  
-      </div>
-      <div class="nhsuk-grid-column-two-thirds">
-        <br><a href="file-uploaded" class="nhsuk-button nhsuk-button--ers_reverse">Link these attachments</a>
 
-        <!--       <p class="nhsuk-body"><a href="">Link these attachments to the referral</a></p>
- -->      <table class="nhsuk-table">
+      <div class="nhsuk-grid-column-full">
+        <table class="nhsuk-table">
 
           <thead class="nhsuk-table__head">
             <tr class="nhsuk-table__row">
-              <th class="nhsuk-table__header" scope="col">File</th>
+              <th class="nhsuk-table__header" scope="col">Type</th>
+              <th class="nhsuk-table__header" scope="col">Status</th>
               <th class="nhsuk-table__header" scope="col">Description</th>
-              <th class="nhsuk-table__header" scope="col">Added by</th>
-              <th class="nhsuk-table__header" scope="col">Date added</th>
+              
             </tr>
           </thead>
           <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="">referral-letter.docx</a></td>
-                <td class="nhsuk-table__cell ">patient referral letter</td>
-                <td class="nhsuk-table__cell ">SMITH, Steven (DR)</td>
-                <td class="nhsuk-table__cell ">23 October 2019</td>
+                <td class="nhsuk-table__cell">Interpreter</td>
+                <td class="nhsuk-table__cell ">      
+                  <div class="nhsuk-form-group">
+                    <select class="nhsuk-select" id="select-1" name="select-1" style="border: 2px solid #4c6272">
+                      <option value="1" selected>Requested</option>
+                    <option value="2">No longer required</option>
+                  </select>
+                </div></td>
+                <td class="nhsuk-table__cell ">                  
+                  <textarea name="description" class="nhsuk-textarea nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0" style="height: 80px;font-size: 16px;">The patient cannot speak english a spanish translator is required</textarea>
+                  </td>
               </tr>
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="">referral-letter 2.docx</a></td>
-                <td class="nhsuk-table__cell ">patient referral letter</td>
-                <td class="nhsuk-table__cell ">SMITH, Steven (DR)</td>
-                <td class="nhsuk-table__cell ">24 October 2019</td>
+                <td class="nhsuk-table__cell">Advocacy</td>
+                <td class="nhsuk-table__cell ">        
+                  <div class="nhsuk-form-group">
+                    <select class="nhsuk-select" id="select-1" name="select-1" style="border: 2px solid #4c6272">
+                      <option value="1" selected>Requested</option>
+                    <option value="2">No longer required</option>
+                  </select>
+                </div></td>
+                <td class="nhsuk-table__cell ">                  
+                  <textarea name="description" class="nhsuk-textarea nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0" style="height: 80px;font-size: 16px;">The patient is blind and will need a chaperone while attending hospital</textarea>
+                </td>
               </tr>
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><a href="">referral-letter 3.docx</a></td>
-                <td class="nhsuk-table__cell ">patient referral letter</td>
-                <td class="nhsuk-table__cell ">SMITH, Steven (DR)</td>
-                <td class="nhsuk-table__cell ">25 October 2019</td>
+                <td class="nhsuk-table__cell">Transport</td>
+                <td class="nhsuk-table__cell "><a href="#">Add</a></td>
+                <td class="nhsuk-table__cell ">-</td>
               </tr>
-              
               </tbody>
               </table>
-            </div>
-          </div>
-
-      <h3>Upload a file</h3>
-
-
-        <div class="nhsuk-upload-button-container">
-          <a href="file-uploaded" class="nhsuk-button nhsuk-button--ers_reverse">Choose a file</a>
-          
+  
         </div>
-      
-      <p><strong>No files are attached.</strong></p>
+
+
+    
 
       
-      <a href="#" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Submit</a>
+      <a href="referral-summary-additional-requirements" class="nhsuk-button nhsuk-button--ers" type="button" name="button">Confirm</a>
 
   </div>
 
